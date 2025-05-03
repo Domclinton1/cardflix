@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrossel Infinito Adaptado</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f4f4f4;
+    }
+    header {
+      position: relative;
+      text-align: center;
+      padding: 30px 20px;
+      background-image: url(./assets/clintin-dos-site-logo-post.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      height: 50vh;
+      color: white;
+      z-index: 0;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: -1;
+    }
+
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .carousel-track {
+      display: flex;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      padding: 10px 0;
+      gap: 20px;
+    }
+
+    .carousel-item {
+      flex: 0 0 auto;
+      width: 500px;
+      background: #1c1c1c;
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.3s ease;
+    }
+    
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .carousel-buttons button {
+      background: rgba(0, 0, 0, 0.6);
+      border: none;
+      color: #fff;
+      padding: 1rem;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      pointer-events: all;
+    }
+
+    .carousel-buttons button:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    .card {
+      flex: 0 0 auto;
+      width: 500px;
+      background: #1c1c1c;
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    .card img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+    }
+    .card .content {
+      padding: 15px;
+      text-align: center;
+    }
+    .card .content h3 {
+      margin: 0 0 10px;
+      font-size: 32px;
+    }
+    .card .content p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-item {
+        min-width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+
+  </header>
+
+<!-- Seção Serviços -->
+<div class="content-box">
+  <h2>Meus Principais Serviços</h2>
+  <div class="carousel-wrapper">
+    <button class="scroll-button left" onclick="scrollLeft('carousel1')">&#10094;</button>
+    <div class="carousel" id="carousel1">
+      <a href="https://impulsodigitalsites-cley.vercel.app" class="card carousel-item">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>Impulso Digital Sites</h3>
+          <p>Desenvolvimento de sites, landing pages, apps, lojas e mais.</p>
+        </div>
+      </a>
+      <a href="#" class="card carousel-item">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>Tráfego Pago</h3>
+          <p>Gestão de Facebook e Google ADS com foco em resultado.</p>
+        </div>
+      </a>
+      <a href="https://wa.me/seunumero" class="card carousel-item">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>Landing Page</h3>
+          <p>Suporte rápido via WhatsApp</p>
+        </div>
+      </a>
+      <a href="https://wa.me/seunumero" class="card carousel-item">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>Site Institucional</h3>
+          <p>Suporte rápido via WhatsApp</p>
+        </div>
+      </a>
+      <a href="https://wa.me/seunumero" class="card carousel-item">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>Página de Vendas</h3>
+          <p>Suporte rápido via WhatsApp</p>
+        </div>
+      </a>
+      <a href="https://wa.me/seunumero" class="card carousel-item">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>Página de Captura</h3>
+          <p>Suporte rápido via WhatsApp</p>
+        </div>
+      </a>
+      <a href="https://wa.me/seunumero" class="card carousel-item">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>Loja Virtual</h3>
+          <p>Suporte rápido via WhatsApp</p>
+        </div>
+      </a>
+      <a href="https://wa.me/seunumero" class="card carousel-item">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>Aplicativo Mobile</h3>
+          <p>Suporte rápido via WhatsApp</p>
+        </div>
+      </a>
+
+    </div>
+    <button class="scroll-button right" onclick="scrollRight('carousel1')">&#10095;</button>
+  </div>
+</div>
+
+<!-- Seção Sites no Ar -->
+<div class="content-box">
+  <h2>Serviços Realizados</h2>
+  <div class="carousel-wrapper">
+    <button class="scroll-button left" onclick="scrollLeft('carousel2')">&#10094;</button>
+    <div class="carousel" id="carousel2">
+      <a href="https://cavalopotente.vercel.app" class="card">
+        <img src="./assets/metodo-cavalo-potente.png" />
+        <div class="content">
+          <h3>Método Cavalo Potente</h3>
+          <p>Acabe com a ejaculação precoce naturalmente.</p>
+        </div>
+      </a>
+      <a href="#" class="card">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>Receitas Fitness</h3>
+          <p>Alimentação saudável e prática para quem quer evoluir.</p>
+        </div>
+      </a>
+      <a href="#" class="card">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>O Caminho da Prosperidade</h3>
+          <p>Aprenda como prosperar com inteligência financeira.</p>
+        </div>
+      </a>
+    </div>
+    <button class="scroll-button right" onclick="scrollRight('carousel2')">&#10095;</button>
+  </div>
+</div>
+
+<!-- Seção Produtos -->
+<div class="content-box">
+  <h2>Meus Produtos</h2>
+  <div class="carousel-wrapper">
+    <button class="scroll-button left" onclick="scrollLeft('carousel3')">&#10094;</button>
+    <div class="carousel" id="carousel2">
+      <a href="https://cavalopotente.vercel.app" class="card">
+        <img src="./assets/metodo-cavalo-potente.png" />
+        <div class="content">
+          <h3>Método Cavalo Potente</h3>
+          <p>Acabe com a ejaculação precoce naturalmente.</p>
+        </div>
+      </a>
+      <a href="#" class="card">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>Receitas Fitness</h3>
+          <p>Alimentação saudável e prática para quem quer evoluir.</p>
+        </div>
+      </a>
+      <a href="#" class="card">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>O Caminho da Prosperidade</h3>
+          <p>Aprenda como prosperar com inteligência financeira.</p>
+        </div>
+      </a>
+    </div>
+    <button class="scroll-button right" onclick="scrollRight('carousel3')">&#10095;</button>
+  </div>
+</div>
+
+<!-- Seção Redes Sociais -->
+<div class="content-box">
+  <h2>Redes Sociais</h2>
+  <div class="carousel-wrapper">
+    <button class="scroll-button left" onclick="scrollLeft('carousel4')">&#10094;</button>
+    <div class="carousel" id="carousel3">
+      <a href="#" class="card">
+        <img src="./assets/clintin-dos-sites-logo.webp" alt="Logo Clintin dos Sites" loading="lazy"/>
+        <div class="content">
+          <h3>Clintin dos Sites</h3>
+          <p>Marketing pessoal para atrair mais clientes.</p>
+        </div>
+      </a>
+      <a href="#" class="card">
+        <img src="./assets/impulso-digital-sites-logo.webp" alt="Logo Impulso Digital Sites" loading="lazy" />
+        <div class="content">
+          <h3>Impulso Digital Sites</h3>
+          <p>Negócio voltado a soluções digitais.</p>
+        </div>
+      </a>
+      <a href="#" class="card">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>GitHub</h3>
+          <p>Veja meus projetos e contribuições.</p>
+        </div>
+      </a>
+      <a href="#" class="card">
+        <img src="./assets/clintin-dos-site-logo-post.png" />
+        <div class="content">
+          <h3>Clintin dos Sites</h3>
+          <p>Veja meus projetos e contribuições.</p>
+        </div>
+      </a>
+      <a href="#" class="card">
+        <img src="./assets/impulsodigital.png" />
+        <div class="content">
+          <h3>Facebook</h3>
+          <p>Meu Facebook</p>
+        </div>
+      </a>
+    </div>
+    <button class="scroll-button right" onclick="scrollRight('carousel4')">&#10095;</button>
+  </div>
+</div>
+<footer>
+  <h3>Desenvolvido por Clintin dos Sites</h3>
+  <p>Desenvolvedor Web e Gestor de Tráfego Pago</p>
+</footer>
+
+<script>
+  const track = document.getElementById('carousel');
+  const itemWidth = 316; // 300 + 16 (margem)
+  let position = -itemWidth; // Começa após o clone do último item
+
+  track.style.transform = `translateX(${position}px)`;
+
+  function moveCarousel(direction) {
+    position += direction * -itemWidth;
+    track.style.transition = 'transform 0.4s ease';
+    track.style.transform = `translateX(${position}px)`;
+
+    setTimeout(() => {
+      // Loop visual
+      const items = track.children.length;
+      if (position <= -itemWidth * (items - 1)) {
+        position = -itemWidth;
+        track.style.transition = 'none';
+        track.style.transform = `translateX(${position}px)`;
+      }
+      if (position >= 0) {
+        position = -itemWidth * (items - 2);
+        track.style.transition = 'none';
+        track.style.transform = `translateX(${position}px)`;
+      }
+    }, 400);
+  }
+</script>
+
+</body>
+</html>
