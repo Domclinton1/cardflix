@@ -6,6 +6,27 @@
   
   <title>Clintin Dos Sites CardLinks</title>
   <style>
+    #scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transition: background-color 0.3s ease;
+}
+#scrollToTopBtn:hover {
+  background-color: #ff4040;
+}
+
     * {
         box-sizing: border-box;
        
@@ -167,6 +188,8 @@
     }
   </style>
 </head>
+<button id="scrollToTopBtn" title="Voltar ao topo">↑</button>
+
 <body>
   <header>
     <div class="header-text">
@@ -417,7 +440,22 @@
       });
     </script>
       
-    
+      <script>
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      
+        window.onscroll = function () {
+          if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollToTopBtn.style.display = "block";
+          } else {
+            scrollToTopBtn.style.display = "none";
+          }
+        };
+      
+        scrollToTopBtn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      </script>
+      
   
   
   
