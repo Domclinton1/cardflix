@@ -344,5 +344,66 @@
   }
 </script>
 
+
+<script>
+  function setupInfiniteCarousel(carouselId) {
+    const carousel = document.getElementById(carouselId);
+    const items = carousel.children;
+    const scrollAmount = items[0].offsetWidth + 10;
+  
+    // Clona os 3 primeiros itens para o fim
+    for (let i = 0; i < 3; i++) {
+      carousel.appendChild(items[i].cloneNode(true));
+    }
+  
+    // Reseta ao início quando atinge os clones
+    carousel.addEventListener('scroll', () => {
+      if (carousel.scrollLeft >= (items.length - 3) * scrollAmount) {
+        carousel.scrollLeft = 0;
+      }
+    });
+  
+    // Suporte a toque no celular
+    let startX;
+    let isDown = false;
+  
+    carousel.addEventListener('touchstart', (e) => {
+      isDown = true;
+      startX = e.touches[0].clientX;
+    });
+  
+    carousel.addEventListener('touchmove', (e) => {
+      if (!isDown) return;
+      const x = e.touches[0].clientX;
+      const walk = startX - x;
+  
+      carousel.scrollLeft += walk;
+      startX = x;
+    });
+  
+    carousel.addEventListener('touchend', () => {
+      isDown = false;
+    });
+  }
+  
+  function moveCarousel(id, direction) {
+    const carousel = document.getElementById(id);
+    const itemWidth = carousel.children[0].offsetWidth + 10;
+    carousel.scrollBy({
+      left: direction * itemWidth,
+      behavior: 'smooth'
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    setupInfiniteCarousel('carousel1');
+    setupInfiniteCarousel('carousel2');
+    
+    setupInfiniteCarousel('carousel3');
+    setupInfiniteCarousel('carousel4');
+  });
+</script>
+
+
 </body>
 </html>
