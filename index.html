@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   <title>Clintin Dos Sites CardLinks</title>
+  <link rel="icon" href="/assets/clintin-dos-sites-logo.webp">
   <style>
     * {
         box-sizing: border-box;
@@ -89,11 +90,38 @@
       text-decoration: none;
       color: white;
       transition: transform 0.3s ease;
+      background-size: cover;
+      background-position: 100% 0%;
+      transition: 10s;
+      cursor: pointer;
+      position: relative;
     }
+    
     .card:hover {
       transform: scale(1.07);
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      background-position: 100% 100%;
     }
+    .overlay {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #00000028;
+    color: var(--branco);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .overlay:hover {
+    opacity: 1;
+  }
     .card img {
       width: 100%;
       height: 450px;
@@ -102,6 +130,7 @@
     .card .content {
       padding: 15px;
       text-align: center;
+      display: none;
     }
     .card .content h3 {
       margin: 0 0 10px;
@@ -228,27 +257,7 @@
             <p>Suporte rápido via WhatsApp</p>
           </div>
         </a>
-        <a href="https://wa.me/seunumero" class="card carousel-item">
-          <img src="./assets/pagina-de-captura.webp" />
-          <div class="content">
-            <h3>Página de Captura</h3>
-            <p>Suporte rápido via WhatsApp</p>
-          </div>
-        </a>
-        <a href="https://wa.me/seunumero" class="card carousel-item">
-          <img src="./assets/clintin-dos-sites-logo.webp" />
-          <div class="content">
-            <h3>Loja Virtual</h3>
-            <p>Suporte rápido via WhatsApp</p>
-          </div>
-        </a>
-        <a href="https://wa.me/seunumero" class="card carousel-item">
-          <img src="./assets/clintin-dos-sites-logo.webp" />
-          <div class="content">
-            <h3>Aplicativo Mobile</h3>
-            <p>Suporte rápido via WhatsApp</p>
-          </div>
-        </a>
+        
 
       </div>
       <button class="scroll-button right" onclick="moveCarousel('carousel1', 1)">&#10095;</button>
@@ -261,25 +270,82 @@
     <div class="carousel-wrapper">
       <button class="scroll-button left" onclick="moveCarousel('carousel2', -1)">&#10094;</button>
       <div class="carousel" id="carousel2">
-        <a href="https://cavalopotente.vercel.app" class="card">
-          <img src="./assets/metodo-cavalo-potente.webp" />
-          <div class="content">
-            <h3>Método Cavalo Potente</h3>
-            <p>Acabe com a ejaculação precoce naturalmente.</p>
+        <a style="background-image: url(./assets/vidrosa-page.webp);" class="card">
+          
+          <div class="content overlay">
+            VIDRAÇARIA VIDROSA
           </div>
         </a>
-        <a href="#" class="card">
-          <img src="./assets/clintin-dos-sites-logo.webp" />
-          <div class="content">
-            <h3>Receitas Fitness</h3>
-            <p>Alimentação saudável e prática para quem quer evoluir.</p>
+        <a style="background-image: url(./assets/angela-modas-landingpage.webp);" class="card">
+          
+          <div class="content overlay">
+            ANGELA MODAS
           </div>
         </a>
-        <a href="#" class="card">
-          <img src="./assets/clintin-dos-sites-logo.webp" />
-          <div class="content">
-            <h3>O Caminho da Prosperidade</h3>
-            <p>Aprenda como prosperar com inteligência financeira.</p>
+        <a style="background-image: url(./assets/dnbluxembourg.webp);" class="card">
+          
+          <div class="content overlay">
+            BANCO DNB LUXEMBOURG
+          </div>
+        </a>
+        <a style="background-image: url(./assets/cavalo-potente-landingpage.webp);" class="card">
+          
+          <div class="content overlay">
+            ELIMINE A EJACULAÇÃO PRECOCE
+          </div>
+        </a>
+        <a style="background-image: url(./assets/clickschat-page.webp);" class="card">
+          
+          <div class="content overlay">
+            CLICKSCHAT
+          </div>
+        </a>
+        <a style="background-image: url(./assets/amandapas-page.webp);" class="card">
+          
+          <div class="content overlay">
+            RECEITAS PROTEICAS
+          </div>
+        </a>
+        <a style="background-image: url(./assets/fce-serralheria.webp);" class="card">
+          
+          <div class="content overlay">
+            FCE SERRALHERIA
+          </div>
+        </a>
+        <a style="background-image: url(./assets/gmglass.webp);" class="card">
+          
+          <div class="content overlay">
+            VIDRAÇARIA GM GLASS
+          </div>
+        </a>
+        <a style="background-image: url(./assets/wedson-construcoes.webp);" class="card">
+          
+          <div class="content overlay">
+            WEDSON CONSTRUCOES
+          </div>
+        </a>
+        <a style="background-image: url(./assets/hreletronicos.webp);" class="card">
+          
+          <div class="content overlay">
+            HR ELETRONICOS
+          </div>
+        </a>
+        <a style="background-image: url(./assets/soaresfibra.webp);" class="card">
+          
+          <div class="content overlay">
+            SOARES FIBRA
+          </div>
+        </a>
+        <a style="background-image: url(./assets/international\ car\ services.webp);" class="card">
+          
+          <div class="content overlay">
+           INTERNATIONAL CAR SERICES
+          </div>
+        </a>
+        <a style="background-image: url(./assets/karinaferreira.webp);" class="card">
+          
+          <div class="content overlay">
+           KARINA FERREIRA
           </div>
         </a>
       </div>
@@ -293,6 +359,13 @@
     <div class="carousel-wrapper">
       <button class="scroll-button left" onclick="moveCarousel('carousel3', -1)">&#10094;</button>
       <div class="carousel" id="carousel3">
+        <a href="#" class="card">
+          <img src="./assets/sistema-barbearia.webp" />
+          <div class="content">
+            <h3>Sistema de Agendamento</h3>
+            <p>Seus clientes podem agendar um horário diretamente pelo aplicativo de agendamento.</p>
+          </div>
+        </a>
         <a href="https://cavalopotente.vercel.app" class="card">
           <img src="./assets/metodo-cavalo-potente.webp" />
           <div class="content">
@@ -301,17 +374,24 @@
           </div>
         </a>
         <a href="#" class="card">
-          <img src="./assets/clintin-dos-sites-logo.webp" />
+          <img src="./assets/guia-de-receitas-fitness.webp" />
           <div class="content">
-            <h3>Receitas Fitness</h3>
+            <h3>Guia de Receitas Fitness</h3>
             <p>Alimentação saudável e prática para quem quer evoluir.</p>
           </div>
         </a>
         <a href="#" class="card">
-          <img src="./assets/clintin-dos-sites-logo.webp" />
+          <img src="./assets/receitas-lucrativas-agua-na-boca.webp" />
           <div class="content">
-            <h3>O Caminho da Prosperidade</h3>
-            <p>Aprenda como prosperar com inteligência financeira.</p>
+            <h3>Receitas Lucrativas</h3>
+            <p>Aprenda receitas deliciosas que vão colocar dinheiro no seu bolso.</p>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/celular_paradise/" target="_blank" class="card">
+          <img src="./assets/celular-paradise.webp" />
+          <div class="content">
+            <h3>CELULAR PARADISE</h3>
+            <p>Venda de celulares novos e seminovos</p>
           </div>
         </a>
       </div>
@@ -325,36 +405,43 @@
     <div class="carousel-wrapper">
       <button class="scroll-button left" onclick="moveCarousel('carousel4', -1)">&#10094;</button>
       <div class="carousel" id="carousel4">
-        <a href="#" class="card">
+        <a href="https://www.instagram.com/clintin_dos_sites/" target="_blank" class="card">
           <img src="./assets/clintin-dos-sites-logo.webp" alt="Logo Clintin dos Sites" loading="lazy"/>
           <div class="content">
             <h3>Clintin dos Sites</h3>
             <p>Marketing pessoal para atrair mais clientes.</p>
           </div>
         </a>
-        <a href="#" class="card">
+        <a href="https://instagram.com/impulsodigitalsites" target="_blank" class="card">
           <img src="./assets/impulso-digital-sites-logo.webp" alt="Logo Impulso Digital Sites" loading="lazy" />
           <div class="content">
             <h3>Impulso Digital Sites</h3>
             <p>Negócio voltado a soluções digitais.</p>
           </div>
         </a>
-        <a href="#" class="card">
-          <img src="./assets/clintin-dos-sites-logo.webp" />
+        <a href="https://github.com/Domclinton1" target="_blank" class="card">
+          <img src="./assets/github.png" />
           <div class="content">
             <h3>GitHub</h3>
             <p>Veja meus projetos e contribuições.</p>
           </div>
         </a>
-        <a href="#" class="card">
-          <img src="./assets/clintin-dos-site-logo-post.png" />
+        <a href="https://www.linkedin.com/in/clinton-ribeiro-964790242/" target="_blank" class="card">
+          <img src="./assets/linkedin.png" />
           <div class="content">
-            <h3>Clintin dos Sites</h3>
-            <p>Veja meus projetos e contribuições.</p>
+            <h3>Linkedin</h3>
+            <p>Minha rede social profissional</p>
           </div>
         </a>
-        <a href="#" class="card">
-          <img src="./assets/clintin-dos-sites-logo.webp" />
+        <a href="https://www.instagram.com/domclintoncorleone" target="_blank" class="card">
+          <img src="./assets/instagram.png" />
+          <div class="content">
+            <h3>INSTAGRAM</h3>
+            <p>Rede social pessoal</p>
+          </div>
+        </a>
+        <a href="https://www.facebook.com/clinton.ribeiro.2025" class="card">
+          <img src="./assets/facebook.png" />
           <div class="content">
             <h3>Facebook</h3>
             <p>Meu Facebook</p>
