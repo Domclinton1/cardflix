@@ -183,6 +183,35 @@
     }
     footer {
       text-align: center;
+      padding: 20px 4%;
+    }
+    footer h3 {
+      font-size: 30px;
+    }
+    footer p {
+      font-size: 22px;
+    }
+    .cta {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .cta p {
+      font-size: 38px;
+    }
+    .cta p:last-child {
+      font-size: 3w2px;
+    }
+    .cta-button {
+      color: white;
+      text-decoration: none;
+      background-color: rgb(26, 239, 26);
+      padding: 20px 4%;
+      width: fit-content;
+      font-size: 32px;
+      border-radius: 15px;
+      box-shadow: -5px 5px 12px -5px  white;
     }
     @media screen and (max-width: 1020px) {
       header {
@@ -229,6 +258,16 @@
         opacity: 0;
         position: absolute;
         z-index: -1;
+      }
+      .cta {
+        width: 100%;
+        
+      }
+      .cta p {
+        font-size: 35px;
+      }
+      .cta p:last-child {
+        font-size: 28px;
       }
     }
   </style>
@@ -388,13 +427,7 @@
             <p>Seus clientes podem agendar um horário diretamente pelo aplicativo de agendamento.</p>
           </div>
         </a>
-        <a href="https://cavalopotente.vercel.app" class="card">
-          <img src="./assets/metodo-cavalo-potente.webp" />
-          <div class="content">
-            <h3>Método Cavalo Potente</h3>
-            <p>Acabe com a ejaculação precoce naturalmente.</p>
-          </div>
-        </a>
+        
         <a href="#" class="card">
           <img src="./assets/guia-de-receitas-fitness.webp" />
           <div class="content">
@@ -414,6 +447,13 @@
           <div class="content">
             <h3>CELULAR PARADISE</h3>
             <p>Venda de celulares novos e seminovos</p>
+          </div>
+        </a>
+        <a href="https://cavalopotente.vercel.app" class="card">
+          <img src="./assets/metodo-cavalo-potente.webp" />
+          <div class="content">
+            <h3>Método Cavalo Potente</h3>
+            <p>Acabe com a ejaculação precoce naturalmente.</p>
           </div>
         </a>
       </div>
@@ -474,8 +514,16 @@
     </div>
   </div>
   <footer>
+    <div class="cta">
+      <p>QUER UMA APLICAÇÃO COMO ESSA?</p>
+      <a href="https://wa.me/5531994038782?text=Olá%2C%20gostaria%20de%20adquirir%20um%20LinkCardflix.
+      " target="_blank" class="cta-button">
+        CHAME AGORA
+      </a>
+      <p>E faça seu orçamento com o CLINTIN DOS SITES</p>
+    </div>
     <h3>Desenvolvido por Clintin dos Sites</h3>
-    <p>Desenvolvimento Web e Gestão de Tráfego Pago</p>
+    <p>Administrador, Desenvolvedor Full Stack e Gestor de Tráfego Pago</p>
   </footer>
   
  
